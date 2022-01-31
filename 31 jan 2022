@@ -1,0 +1,41 @@
+/* g.sravani awdc rjy assignment 1 */
+#include <stdio.h>
+
+int main()
+{
+   int low,high,mid,n,key,i,a[100],found;
+   printf("enter number elements");
+   scanf("%d",&n);
+   for(i=0;i<n;i++)
+   scanf("%d",&a[i]);
+   printf("enter value to find");
+   scanf("%d",&key);
+   low=0;
+   high=n-1;
+   while(low<=high)
+   {
+       mid=(low+high)/2;
+       if(key<a[mid])
+       {
+       high=mid-1;
+   }
+   else if(key>a[mid])
+   {
+       low=mid+1;
+   }
+   else if(key==a[mid])
+   {
+       found=1;
+       break;
+   }
+}
+if(found==1)
+printf("element found");
+else
+printf("element is not found");
+return 0;
+
+   }
+   
+       
+   
